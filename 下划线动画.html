@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .content {
+            width: 12px;
+        }
+        .fancy-link {
+            text-decoration: none;
+            background-image: linear-gradient(red, red);
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: 0% 3px;
+            transition: background-size 500ms ease-in-out;
+
+            /* extra styling   */
+            font-weight: var(--fw-bold);
+        }
+
+        .fancy-link:hover {
+            background-size: 100% 3px;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="content">
+        <span class="fancy-link" href="#">Hover This</span>
+    </p>
+</body>
+
+</html>
