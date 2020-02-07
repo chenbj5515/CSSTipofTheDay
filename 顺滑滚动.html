@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html {
+            /* 使点击第N屏的时候页面的滚动是顺滑的 */
+            scroll-behavior: smooth;
+        }
+
+        body,
+        p {
+            margin: 0;
+            padding: 0;
+            font-family: 'Microsoft yahei';
+        }
+
+        header {
+            height: 40px;
+            line-height: 40px;
+            background: #efefef;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        header a {
+            color: #333;
+            text-decoration: none;
+            padding: 0 20px;
+        }
+
+        section {
+            width: 100%;
+            height: 500px;
+            line-height: 500px;
+            font-size: 20px;
+            text-align: center;
+            background: #efefef;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#part1">第一屏</a>
+        <a href="#part2">第二屏</a>
+        <a href="#part3">第三屏</a>
+        <a href="#part4">第四屏</a>
+    </header>
+
+    <section id="part1">这是第一屏内容</section>
+    <section id="part2">这是第二屏内容</section>
+    <section id="part3">这是第三屏内容</section>
+    <section id="part4">这是第四屏内容</section>
+</body>
+
+</html>
