@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <style>
+        .app {
+            width: 560px;
+            height: 360px;
+            background: thistle;
+            position: relative;
+        }
+        
+        .cont {
+            width: 160px;
+            height: 40px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        span {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: royalblue;
+            display: inline-block;
+            position: relative;
+            margin-right: 20px;
+            left: -60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <div class="cont">
+            <span></span><span></span><span></span><span></span>
+        </div>
+    </div>
+    <script>
+        var tl = new TimelineMax({
+            repeat: -1,
+            repeatDelay: 0.05 //delay the repeat by 0.05 seconds so that it's a total of 1 second long (last stagger is delayed 0.45 seconds, and the tween is 0.5 seconds long = 0.95 seconds total)
+        });
+        tl.staggerFromTo(
+            'span', //target (all span tags)
+            0.5, //duration (0.5 seconds)
+            {
+                x: 0
+            }, //"from" values
+            {
+                x: 60
+            }, //"to" values
+            -0.15 //stagger amount (seconds between each start time)
+        );
+    </script>
+</body>
+
+</html>
