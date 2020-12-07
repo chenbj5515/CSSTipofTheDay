@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #grid {
+            width: 600px;
+            display: grid;
+            height: 100px;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 100px;
+        }
+
+        #item1 {
+            background-color: lightpink;
+        }
+
+        #item2 {
+            background-color: lightskyblue;
+            /* 这里/号左边表示网格的起始位置，右边便是结束位置 */
+            grid-column: 2 / 4;
+        }
+
+        #item3 {
+            background-color: royalblue;
+            /* 这种表示从左边第五条网格线开始，宽度是两个网格 */
+            grid-column: 5 / span 2;
+        }
+    </style>
+</head>
+<body>
+    <div id="grid">
+        <div id="item1"></div>
+        <div id="item2"></div>
+        <div id="item3"></div>
+    </div>
+</body>
+</html>

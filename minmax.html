@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: minmax(150px, 25%) 1fr;
+            font-family: system-ui, serif;
+            padding: 0;
+            margin: 0;
+            resize: both;
+            overflow: auto;
+        }
+
+        .sidebar {
+            height: 100vh;
+            background: lightpink;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="sidebar" contenteditable>
+            Min: 150px
+            <br/>
+            Max: 25%
+        </div>
+        <p class="content" contenteditable>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nulla architecto maxime modi nisi. Quas saepe dolorum, architecto quia fugit nulla! Natus, iure eveniet ex iusto tempora animi quibusdam porro?
+        </p>
+    </div>
+</body>
+</html>

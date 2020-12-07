@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            display: grid;
+            place-content: center;
+            height: 60vh;
+            resize: both;
+            overflow: auto;
+            background-color: lightskyblue;
+        }
+
+        .visual {
+            height: 100px;
+            width: 100%;
+            background: lightsalmon;
+            margin: 0.5rem 0;
+        }
+
+        .card {
+            /* clamp中间的值是正常情况下期望的值，即父元素的50%，但是不会小于23个英文字母的宽度，不会大于46个英文字母的宽度 */
+            width: clamp(23ch, 50%, 46ch);
+            display: flex;
+            flex-direction: column;
+            background: lightpink;
+            padding: 1rem;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="card">
+            <h1>Title Here</h1>
+            <div class="visual"></div>
+            <p>Descriptive Text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed est error repellat veritatis.</p>
+        </div>
+    </div>
+</body>
+</html>

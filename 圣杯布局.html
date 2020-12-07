@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            display: grid;
+            height: 80vh;
+            /* /号左边定义几行，右边定义几列 */
+            grid-template: auto 1fr auto / auto 1fr auto;
+            resize: both;
+            overflow: auto;
+        }
+
+        header {
+            background: lightpink;
+            padding: 2rem;
+            /* 因为一共是三行，所以1到4代表要占一整行 */
+            grid-column: 1 / 4;
+        }
+
+        .left-sidebar {
+            background: lightblue;
+            /* 代表要占一整行的左数第一个格子 */
+            grid-column: 1 / 2;
+        }
+
+        main {
+            background: lightcoral;
+            /* 代表要占一整行的左数第二个格子 */
+            grid-column: 2 / 3;
+        }
+
+        .right-sidebar {
+            background: royalblue;
+            /* 代表要占一整行的左数第三个格子 */
+            grid-column: 3 / 4;
+        }
+
+        footer {
+            background: lightsalmon;
+            padding: 2rem;
+            text-align: center;
+            /* 代表要占一整行 */
+            grid-column: 1 / 4;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+        }
+
+        .left-sidebar,
+        .right-sidebar {
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <header>
+            <h1 contenteditable>Have fun, be awesome!</h1>
+        </header>
+        <div class="left-sidebar" contenteditable>Left Sidebar</div>
+        <main contenteditable></main>
+        <div class="right-sidebar" contenteditable>Right Sidebar</div>
+        <footer contenteditable>Footer Content — Header.com 2020</footer>
+    </div>
+</body>
+</html>
